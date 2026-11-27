@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project Details | Jamaica's Portfolio</title>
+
+    <link rel="stylesheet" href="Style.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        .details-header {
+            padding: 65px 5%;
+            text-align: center;
+            background: var(--pink-pale);
+        }
+
+        .details-header h1 {
+            font-family: Georgia, serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 10px 0;
+        }
+
+        .details-wrapper {
+            width: min(950px, 90%);
+            margin: 45px auto;
+            display: grid;
+            gap: 35px;
+        }
+
+        /* Hide every project until its matching link is selected. */
+        .detail-card {
+            display: none;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: var(--shadow);
+            scroll-margin-top: 100px;
+        }
+
+        .detail-card.is-active {
+            display: block;
+            animation: projectFadeIn 0.3s ease;
+        }
+
+        @keyframes projectFadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .detail-card img {
+            width: 100%;
+            max-height: 480px;
+            object-fit: contain;
+            background: var(--pink-pale);
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .detail-card h2 {
+            font-family: Georgia, serif;
+            margin: 10px 0;
+            color: var(--pink-dark);
+        }
+
+        .detail-card p {
+            color: var(--muted);
+            margin: 10px 0;
+            line-height: 1.8;
+        }
+
+        .back-button {
+            display: inline-flex;
+            margin-top: 20px;
+        }
+
+        @media(max-width: 600px) {
+            .detail-card {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <a href="Index.html" class="logo">
+                Kyle's Portfolio ♡
+            </a>
+
+        </nav>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="details-header">
+        <p class="eyebrow">MY CREATIVE WORK</p>
+        <h1>Project Details ♡</h1>
+        <p>Explore the concepts, process, and details behind my activities.</p>
+
+        <a href="Index.html#projects" class="btn back-button">
+            Back to Portfolio
+        </a>
+    </section>
+
+    <main class="details-wrapper">
+
+        <!-- PROJECT 1 -->
+        <article class="detail-card" id="lingkodhub">
+            <p class="eyebrow">System Development | November 12, 2026</p>
+            <h2>Lingkod Hub</h2>
+
+            <img src="image/lingkodhub.webp"
+                 alt="Lingkod Hub">
+
+            <p>
+               A Web-Based system that will provide a centralized platform for managing resident records, 
+               processing barangay document requests, and handling health center appointment requests. 
+               Residents will be able to register accounts, submit document requests, request health center appointments, 
+               and view barangay announcements online.
+            </p>
+
+            <p><strong>Category:</strong> System Development</p>
+            <p><strong>Output:</strong> Software Engineering Project</p>
+        </article>
+
+        <!-- PROJECT 2 -->
+        <article class="detail-card" id="thinktounlock">
+            <p class="eyebrow">Web Design | May 24, 2025</p>
+            <h2>Think to Unlock</h2>
+
+            <img src="image/thinktounlock.jpg"
+                 alt="Think to Unlock">
+
+            <p>
+                  Think to Unlock is a quiz game developed using JavaScript as a first-year academic project. 
+                    It features 20 random questions where players earn coins for every correct answer. 
+                    Players start with three lives and can use their earned coins to purchase an extra life. 
+                    The project demonstrates basic JavaScript programming concepts, game logic, and interactive user interface development.
+            </p>
+
+            <p><strong>Category:</strong> Web Design</p>
+            <p><strong>Output:</strong> Java programming</p>
+        </article>
+
+        <!-- PROJECT 3 -->
+        <article class="detail-card" id="cutify">
+            <p class="eyebrow">Web Design | November 18, 2026</p>
+            <h2>Cutify</h2>
+
+            <img src="image/cutify.webp"
+                 alt="Cutify ">
+
+            <p>
+                A proposed web-based barbershop appointment booking and scheduling system 
+                  designed to provide customers with a convenient way to request appointments online.
+            </p>
+
+            <p><strong>Category:</strong> Web Design</p>
+            <p><strong>Output:</strong> Technopreneurship</p>
+        </article>
+
+        <!-- PROJECT 4 -->
+        <article class="detail-card" id="infographic">
+            <p class="eyebrow">Infographic | November 10, 2026</p>
+            <h2>Infographic Design</h2>
+
+            <img src="image/infographic.jpg"
+                 alt="Infographic">
+
+            <p>
+                This infographic presents the five essential stages of the design process: Research, Ideate, Design, Review, and Deliver. 
+                It explains how a project moves from identifying problems and gathering ideas to creating, evaluating, 
+                and finalizing a design. The visual serves as a guide to understanding an organized and effective design workflow.
+            </p>
+
+            <p><strong>Category:</strong> Graphic Design</p>
+            <p><strong>Output:</strong> Graphic Design Output</p>
+        </article>
+
+        <p id="project-not-found" class="empty-state" hidden>
+            Project not found. Please return to the portfolio and select a project.
+            <a href="Index.html#projects">Back to Projects</a>
+        </p>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>© 2026 Kyle Joshua Perfiñan. All rights reserved.</p>
+            <a href="Index.html#projects">Back to Projects ↑</a>
+        </div>
+    </footer>
+
+
+    <script>
+        (function () {
+            const cards = Array.from(document.querySelectorAll('.detail-card'));
+
+            function displaySelectedProject() {
+                const id = decodeURIComponent(window.location.hash.slice(1));
+                const selected = cards.find(card => card.id === id);
+
+                cards.forEach(card => {
+                    const active = card === selected;
+                    card.classList.toggle('is-active', active);
+                    card.setAttribute('aria-hidden', String(!active));
+                });
+
+                // If no valid project ID is in the URL, show a helpful message
+                // instead of incorrectly defaulting to Project 1.
+                const message = document.getElementById('project-not-found');
+                if (message) {
+                    message.hidden = Boolean(selected);
+                }
+
+                if (selected && window.location.hash) {
+                    requestAnimationFrame(() => {
+                        selected.scrollIntoView({ block: 'start' });
+                    });
+                }
+            }
+
+            displaySelectedProject();
+            window.addEventListener('hashchange', displaySelectedProject);
+        })();
+    </script>
+
+</body>
+</html>
